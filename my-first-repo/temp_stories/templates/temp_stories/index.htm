@@ -25,9 +25,14 @@
             <button type ="submit">Save story </button>
         </form>
         {% endif %}
-        {% if stories %}
-        <p>{{ stories }}</p>
-        {% endif %}
+        <h2> Saved stories </h2>
+        <ul>
+            {% for entry in stories %}
+                <li> {{ entry.temperature }}C: {{ entry.story }}</li>
+                {% empty %}
+                <li> no saved story yet </li>
+            {% endfor %}
+        </ul>
     </body>
 </html>
 

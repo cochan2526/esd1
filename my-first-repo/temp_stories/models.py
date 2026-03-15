@@ -3,8 +3,10 @@ from django.db import models
 # Create your models here.
 
 class StoryEntry (models.Model):
-    temperature = models. IntegerField ()
+
+    temperature = models.IntegerField ()
     story = models.CharField ( max_length = 200 )
+
     def __str__ (self):
         return ( f"{ self. temperature }C" )
 
